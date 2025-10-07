@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Ahmed</title>
+  <style>
+    :root {
+      --primary: #1171B1;
+      --accent: #FCC102;
+      --highlight: #02DF4C;
+      --text: #222;
+      --bg: #f7f9fc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      background: var(--highlight);
+      color: #fff;
+      padding: 0.8rem 1.8rem;
+      border-radius: 2rem;
+      margin-top: 2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0fc14a;
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.2rem;
+    }
+
+    .card-content h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ahmed</h1>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Halo, Saya Ahmed</h2>
+    <p>Desainer & pembuat motion graphic yang berfokus pada karya visual yang menarik, detail, dan bermakna.</p>
+    <a href="#projects" class="btn">Lihat Portofolio</a>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">Tentang Saya</h2>
+    <div class="about">
+      <img src="https://via.placeholder.com/450x300.png?text=Foto+Profil" alt="Ahmed">
+      <p>
+        Saya seorang kreator motion graphic dan desainer visual dengan pengalaman dalam pembuatan animasi, desain digital, dan branding modern.  
+        Fokus saya adalah menciptakan karya yang tidak hanya indah secara visual, tetapi juga menyampaikan pesan yang kuat dan mudah dipahami.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Proyek Terbaru</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250.png?text=Project+1" alt="Project 1">
+        <div class="card-content">
+          <h3>Motion Graphic Kesehatan</h3>
+          <p>Video edukasi yang menampilkan dedikasi tenaga kesehatan dalam menjaga masyarakat.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250.png?text=Project+2" alt="Project 2">
+        <div class="card-content">
+          <h3>Desain Kampanye Sosial</h3>
+          <p>Karya visual dengan pesan moral yang kuat untuk meningkatkan kesadaran publik.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250.png?text=Project+3" alt="Project 3">
+        <div class="card-content">
+          <h3>Brand Identity</h3>
+          <p>Desain logo dan identitas visual untuk bisnis modern dengan pendekatan minimalis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Hubungi saya di:
+      <a href="mailto:ahmed@example.com">ahmed@example.com</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">LinkedIn</a>
+    </p>
+    <p>&copy; 2025 Ahmed. Semua Hak Dilindungi.</p>
+  </footer>
+
+</body>
+</html>
